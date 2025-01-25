@@ -125,13 +125,7 @@ class QASystem:
 
 if __name__ == "__main__":
     assistant = QASystem("base_config.json")
-    assistant.build_rag_chain(
-        assistant.config.prompt,
-        assistant.config.ollama_llm_name,
-        assistant.config.ollama_llm_temperature,
-    )
     answer = assistant.invoke(
         "How many different norms can np.linalg.norm calculate? Give just a single number"
     )
-    breakpoint()
     print(answer)
