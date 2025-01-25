@@ -50,6 +50,12 @@ class QASystem:
 
         self._pull_ollama_model(model_name=self.config.ollama_llm_name)
         logger.info("Successfully pulled model for ollama.")
+        self._build_rag_chain(
+            prompt_template=self.config.prompt,
+            ollama_llm_name=self.config.ollama_llm_name,
+            ollama_llm_temperature=self.config.ollama_llm_temperature,
+        )
+        logger.info("Succesfully built RAG chain.")
 
     def _pull_ollama_model(self, model_name: str):
         try:
@@ -92,7 +98,7 @@ class QASystem:
 
         return retriever
 
-    def build_rag_chain(
+    def _build_rag_chain(
         self,
         prompt_template: str,
         ollama_llm_name: str,
@@ -115,10 +121,17 @@ class QASystem:
 
     def invoke(self, question: str):
         return self.rag_chain.invoke(question)
-    
+
 
 if __name__ == "__main__":
     assistant = QASystem("base_config.json")
-    assistant.build_rag_chain(assistant.config.prompt, assistant.config.ollama_llm_name, assistant.config.ollama_llm_temperature)
-    answer = assistant.invoke("How many different norms can np.linalg.norm calculate? Give just a single number")
+    assistant.build_rag_chain(
+        assistant.config.prompt,
+        assistant.config.ollama_llm_name,
+        assistant.config.ollama_llm_temperature,
+    )
+    answer = assistant.invoke(
+        "How many different norms can np.linalg.norm calculate? Give just a single number"
+    )
+    breakpoint()
     print(answer)
