@@ -1,0 +1,5 @@
+ollama
+langchain
+langchain-community
+langchain_ollama
+marker-pdf
