@@ -1,0 +1,54 @@
+[
+    {
+        "question": "How many different norms can np.linalg.norm calculate? Answer with just a single number.",
+        "expected_answer": "8"
+    },
+    {
+        "question": "What is the default axis for np.sum? Answer with one word.",
+        "expected_answer": "None"
+    },
+    {
+        "question": "How can you create a 3x3 identity matrix in NumPy? Provide the function name. Answer with one word.",
+        "expected_answer": "eye"
+    },
+    {
+        "question": "What is the default value of the parameter 'keepdims' in np.mean? Answer with one word.",
+        "expected_answer": "False"
+    },
+    {
+        "question": "What is the number of unique data types supported by np.zeros? Answer with a single number.",
+        "expected_answer": "24"
+    },
+    {
+        "question": "What is the default rounding method for np.round? Answer with one word.",
+        "expected_answer": "half"
+    },
+    {
+        "question": "How many optional arguments does np.matmul accept? Answer with a single number.",
+        "expected_answer": "2"
+    },
+    {
+        "question": "What is the default dtype for np.arange? Answer with one word.",
+        "expected_answer": "None"
+    },
+    {
+        "question": "What is the default 'order' in np.reshape? Answer with one word.",
+        "expected_answer": "C"
+    },
+    {
+        "question": "What is the default fill value for np.full? Answer with a single number.",
+        "expected_answer": "0"
+    },
+    {
+        "question": "What is the highest supported axis number for a 5D array in NumPy? Answer with a single number.",
+        "expected_answer": "4"
+    },
+    {
+        "question": "What is the default output dtype for np.diff? Answer with one word.",
+        "expected_answer": "int"
+    },
+    {
+        "question": "What is the smallest positive floating-point number supported by np.float64? Answer with one word.",
+        "expected_answer": "tiny"
+    }
+]

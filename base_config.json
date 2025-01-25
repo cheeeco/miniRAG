@@ -1,0 +1,10 @@
+{
+  "document_pdf_path": "numpy_ref.pdf",
+  "ollama_llm_name": "llama3.2:1b",
+  "ollama_llm_temperature": 0.3,
+  "embedding_model": "intfloat/multilingual-e5-large",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "top_k_document": 3,
+  "prompt": "Answer the question based only on the following context: \n\n {context} \n\n Question: \n\n {question}"
+}
